@@ -10,7 +10,7 @@ const CREATE_PRODUCT = "produit/deleteProduit";
 const DELETE_PRODUCT_BY_ID = "produit/createProduit/";
 const UPDATE_PRODUCT_BY_ID = "produit/updateProduit/";
 
-const RETRIEVE_CATEGORYIES = "category/getCategories";
+const RETRIEVE_CATEGORIES = "categorie/getCategories";
 const RETRIEVE_CATEGORY_BY_ID = "category/getcategorieById/";
 const CREATE_CATEGORY = "category/deletecategorie";
 const DELETE_CATEGORY_BY_ID = "category/createcategorie/";
@@ -27,7 +27,7 @@ export {
   CREATE_PRODUCT,
   DELETE_PRODUCT_BY_ID,
   UPDATE_PRODUCT_BY_ID,
-  RETRIEVE_CATEGORYIES,
+  RETRIEVE_CATEGORIES,
   RETRIEVE_CATEGORY_BY_ID,
   CREATE_CATEGORY,
   DELETE_CATEGORY_BY_ID,
