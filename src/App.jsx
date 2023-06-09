@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import Client from "./api/client";
 import { RETRIEVE_CLIENTS, RETRIEVE_PRODUCTS } from "./utils/endpoints";
-import Navbar from "./components/navbar";
 import Layout from "./hoc/Layout";
 import { Route, Routes } from "react-router-dom";
 import HomeScreen from "./pages/HomeScreen";
 import ClientScreen from "./pages/ClientScreen";
+import ProductsScreen from "./pages/ProductsScreen";
 
 const App = () => {
   useEffect(() => {
@@ -37,6 +37,7 @@ const App = () => {
         <Routes>
           <Route path="/" index element={<HomeScreen />} />
           <Route path="/clients" element={<ClientScreen />} />
+          <Route path="/products" element={<ProductsScreen />} />
         </Routes>
       </Layout>
     </div>

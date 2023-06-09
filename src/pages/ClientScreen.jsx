@@ -35,12 +35,13 @@ const ClientScreen = () => {
   const [isVisivle, setIsVisible] = useState(false);
   const [isModalVisible, setModalIsVisivle] = useState(false);
   const [selectedClient, setSelectedClient] = useState(initialValues);
+  const [reload, setReload] = useState(false);
 
   const handleClientSubmit = async (values) => {
     try {
       const resp = await Client.post(CREATE_CLIENT, values);
       const data = await resp?.data;
-      setClients([...clients, data]);
+      setReload(true);
       console.log(data);
     } catch (error) {
       console.log(error);
@@ -54,10 +55,12 @@ const ClientScreen = () => {
         values
       );
       const data = await resp?.data;
-      setClients([...clients, data]);
+      setReload(true);
+      closeModal();
       console.log(data);
     } catch (error) {
       console.log(error);
+      setReload(false);
     }
   };
 
@@ -67,10 +70,12 @@ const ClientScreen = () => {
         `${DELETE_CLIENT_BY_ID}/${selectedClient._id}`
       );
       const data = await resp?.data;
-      setClients([...clients, data]);
+      setReload(true);
+      closeModal();
       console.log(data);
     } catch (error) {
       console.log(error);
+      setReload(false);
     }
   };
 
@@ -84,18 +89,23 @@ const ClientScreen = () => {
     setModalIsVisivle(false);
   };
 
+  const fetchClients = async () => {
+    try {
+      const resp = await Client.get(RETRIEVE_CLIENTS);
+      const data = await resp?.data;
+      setClients(data);
+    } catch (error) {
+      console.log();
+    }
+  };
+
   useEffect(() => {
-    const fetchClients = async () => {
-      try {
-        const resp = await Client.get(RETRIEVE_CLIENTS);
-        const data = await resp?.data;
-        setClients(data);
-      } catch (error) {
-        console.log();
-      }
-    };
     fetchClients();
   }, []);
+
+  useEffect(() => {
+    if (reload) fetchClients();
+  }, [reload]);
 
   return (
     <div className="max-w-screen-xl min-h-screen flex flex-col mx-auto pt-28 pb-10 px-4">
