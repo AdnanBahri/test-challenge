@@ -1,8 +1,8 @@
 const RETRIEVE_CLIENTS = "client/getClients";
-const RETRIEVE_CLIENT_BY_ID = "client/getClientById/";
+const RETRIEVE_CLIENT_BY_ID = "client/getClientById";
 const CREATE_CLIENT = "client/createClient";
-const DELETE_CLIENT_BY_ID = "client/deleteClient/";
-const UPDATE_CLIENT_BY_ID = "client/updateClient/";
+const DELETE_CLIENT_BY_ID = "client/deleteClient";
+const UPDATE_CLIENT_BY_ID = "client/updateClient";
 
 const RETRIEVE_PRODUCTS = "produit/getProduits";
 const RETRIEVE_PRODUCT_BY_ID = "produit/getProduitById/";

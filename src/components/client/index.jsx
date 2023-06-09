@@ -1,8 +1,11 @@
 import React from "react";
 
-const ClientCard = ({ nom, telephone, adresse, sousDomaine }) => {
+const ClientCard = ({ nom, telephone, adresse, sousDomaine, click }) => {
   return (
-    <div className="w-full bg-white rounded-md text-slate-900 cursor-pointer px-4 py-2 shadow-md">
+    <div
+      onClick={click}
+      className="w-full bg-white rounded-md text-slate-900 cursor-pointer p-4 shadow-md"
+    >
       {`${nom}: ${sousDomaine}`}
     </div>
   );
