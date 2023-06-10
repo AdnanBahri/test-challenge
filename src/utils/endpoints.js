@@ -6,14 +6,14 @@ const UPDATE_CLIENT_BY_ID = "client/updateClient";
 
 const RETRIEVE_PRODUCTS = "produit/getProduits";
 const RETRIEVE_PRODUCT_BY_ID = "produit/getProduitById/";
-const CREATE_PRODUCT = "produit/deleteProduit";
-const DELETE_PRODUCT_BY_ID = "produit/createProduit/";
+const DELETE_PRODUCT_BY_ID = "produit/deleteProduit";
+const CREATE_PRODUCT = "produit/createProduit/";
 const UPDATE_PRODUCT_BY_ID = "produit/updateProduit/";
 
 const RETRIEVE_CATEGORIES = "categorie/getCategories";
 const RETRIEVE_CATEGORY_BY_ID = "category/getcategorieById/";
-const CREATE_CATEGORY = "category/deletecategorie";
-const DELETE_CATEGORY_BY_ID = "category/createcategorie/";
+const DELETE_CATEGORY_BY_ID = "category/deletecategorie";
+const CREATE_CATEGORY = "category/createcategorie/";
 const UPDATE_CATEGORY_BY_ID = "category/updatecategorie/";
 
 export {

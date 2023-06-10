@@ -5,11 +5,9 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-sm w-full border-gray-200 dark:bg-gray-900 fixed top-0 left-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" className="flex items-center">
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Admin Panel
-          </span>
-        </a>
+        <p className="flex items-center self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <Link to="/">Admin Panel</Link>
+        </p>
         <button
           data-collapse-toggle="navbar-default"
           type="button"
